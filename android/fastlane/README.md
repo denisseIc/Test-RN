@@ -16,9 +16,9 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## Android
-### android beta
+### android upload_browserstack
 ```
-fastlane android beta
+fastlane android upload_browserstack
 ```
 Submit 
 

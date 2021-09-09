@@ -22,11 +22,12 @@ platform :android do
   end
 
   desc "Submit "
-  lane :beta do
-    gradle(task: 'clean')
-    gradle(
-      task: 'bundle',
-      build_type: 'Release'
-    )
+  lane :upload_browserstack do
+    upload_to_browserstack_app_live(
+      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
+      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
+      # file_path: "app/build/outputs/apk/release/app-release.apk"
+      file_path: "AC_APK_PATH"
+    )   
   end
 end
