@@ -26,7 +26,7 @@ platform :android do
     upload_to_browserstack_app_live(
       browserstack_username: ENV["BROWSERSTACK_USERNAME"],
       browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
-      file_path: "app/app-release.apk"
+      file_path: "app/build/outputs/apk/release/app-release.apk"
     )   
   end
 end
